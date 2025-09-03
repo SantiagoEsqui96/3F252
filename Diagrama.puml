@@ -1,0 +1,69 @@
+@startuml
+class Juego
+class Centipede
+class Segmento
+class Cabeza
+class Jugador
+class Nave
+class Laser
+class Disparo
+class Enemigo
+class Escorpion
+class Arana
+class Pulga
+class Hongo
+class Obstaculo
+class Fondo
+class Nivel
+class Dificultad
+class Vida
+class Puntaje
+class Velocidad
+class Explosion
+class Sonido
+class Animacion
+class Imagen
+class AreaDisparo
+class Campo
+class Veneno
+class Posicion
+class Velocidad
+class Insecto
+class Punto
+Juego*--Fondo
+Juego*--Jugador
+Juego*--Enemigo
+Juego " "*-- "*" Hongo
+Juego*--Imagen
+Juego" " *-- "*" Nivel
+Juego *-- Sonido
+Juego *-- Campo
+Hongo --|> Obstaculo
+Jugador o-- Nave
+Nave o-- Disparo
+Arana --|> Insecto
+Escorpion --|> Insecto
+Pulga --|> Insecto
+Insecto <|-- Enemigo
+Centipede --|> Insecto
+Centipede*-- Cabeza
+Centipede " "*-- "*" Segmento
+Insecto*--Vida
+Jugador " "*-- "3" Vida
+Jugador*--Posicion
+Insecto *-- Posicion
+Escorpion o-- Veneno
+Insecto *-- Velocidad
+Nivel *-- Dificultad
+Dificultad *-- Velocidad
+Campo *-- AreaDisparo
+Disparo --|> Laser
+Enemigo *-- Explosion
+Jugador *-- Puntaje
+Arana *-- "300,600" Punto
+Escorpion *-- "1000" Punto
+Centipede " " *-- "10,100" Punto
+Pulga " " *-- "200" Punto
+Hongo " " *-- "1" Punto
+Enemigo *-- Animacion
+@enduml
