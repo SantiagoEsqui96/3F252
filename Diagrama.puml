@@ -50,7 +50,7 @@ Centipede*-- Cabeza
 Centipede " "*-- "*" Segmento
 Insecto*--Vida
 Jugador " "*-- "3" Vida
-Jugador*--Posicion
+Jugador *--Posicion
 Insecto *-- Posicion
 Escorpion o-- Veneno
 Insecto *-- Velocidad
