@@ -15,7 +15,7 @@ class Hongo
 class Obstaculo
 class Fondo
 class Nivel
-class Dificultad
+class Dificultad 
 class Vida
 class Puntaje
 class Velocidad
