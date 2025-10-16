@@ -8,22 +8,47 @@ class Humano{
         string nombre;
         int edad;
 public:
-    string LeerNombre();
-    int LeerEdad();
+
+    Humano(string n = "Desconocido", int e = 0){
+        nombre = n;
+        edad = e;
+    }
+
+    string LeerNombre(){
+        return nombre;
+    }
+
+    int LeerEdad(){
+        return edad;
+    }
+
 };
 
 class Alumno : public Humano{
 public:
     int registro;
 public:
-    int LeerRegistro;
+
+    Alumno(string n = "Alumno", int e = 0, int reg = 0) : Humano(n, e){
+        registro = reg;
+    }
+    int LeerRegistro () {
+        return registro;
+    }
+
 };
 
 class Empleado : public Humano{
 private:
     long noEmpleado;
 public:
-    long LeerNumeroEmpleado();
+
+Empleado(string n = "Empleado", int e = 0, long num= 0) : Humano(n, e) {
+        noEmpleado = num;
+}
+    long LeerNumeroEmpleado(){
+        return noEmpleado;
+    }
 };
 
 int main(int argc, char const *argv[])
